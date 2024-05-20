@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+    --mousetopposition: 0px;
+    --mouseleftposition: 0px;
+}
+@font-face {
+    font-family: Epkaisho;
+    src: url("../../public/fonts/epkaisho.woff2")
+}
+
+@keyframes smoothfollow {
+    from {
+        background-color: rgb(0, 174, 197);
+    };
+    to {
+        background-color: rgb(184, 184, 184);
+    };
+
+}
+
+.cursorbubble  {
+
+    top: var(--mousetopposition);
+    left: var(--mouseleftposition); 
+    border-radius: 100%;
+    opacity:80%;
+    animation: smoothfollow 3s forwards infinite ease-in-out alternate-reverse;
+}
+
+
+@keyframes titleShadow {
+    from {
+        text-shadow: 0px 4px 4px rgb(255, 255, 255);
+    }
+    to {
+        text-shadow: 0px 4px 4px rgb(255, 255, 255);
+    }
+}
+@layer components {
+    .titleNoHover {
+        transition: cubic-bezier(.16,.5,.75,.5);
+        text-shadow: 0 0px 0px rgba(255, 255, 255, 0);
+    }
+    .titleHover {
+        transition: cubic-bezier(.16,.5,.75,.5);
+        animation-name: titleShadow;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(.16,.5,.75,.5);
+        animation-direction: alternate;
+        animation-fill-mode: both;
+    }
+
+}   
