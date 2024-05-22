@@ -1,10 +1,7 @@
 "use client";
 import Header from "../_components/header";
-import Carousel from "../_components/carousel";
-import { type Sketch } from "@p5-wrapper/react";
-import { NextReactP5Wrapper } from "@p5-wrapper/next";
+
 import Background from "../_p5/background";
-import TestFetchSpotify from "../_components/TestFetchSpotify";
 import { useState } from "react";
 
 
