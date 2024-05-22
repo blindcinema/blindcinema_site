@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const FetchSpotify = () => {
+const TestFetchSpotify = () => {
 
     const [data,setData] = useState(null);
     const [loading,setLoading] = useState(true);
@@ -41,10 +41,7 @@ const FetchSpotify = () => {
         ?
         <div> 
          <div>
-                Title:  {data?.title} 
-            </div>
-            <div>
-            <img src= {data.thumbnail_url} ></img>
+                Title:  {/*data?.title*/} 
             </div>
         </div>
 
