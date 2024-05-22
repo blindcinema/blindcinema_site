@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "../_styles/globals.css";
 import localFont from "next/font/local";
 
 const evaFont = localFont({
-   src: '../../public/fonts/epkaisho.woff2',
+   src: '../_fonts/epkaisho.woff2',
    weight: "400",
   }) 
 /*   const evaFont = localFont({
@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-black text-white overflow-y-hidden">{children}</body>
+      <body className="text-white overflow-y-hidden">{children}</body>
     </html>
   );
 }

@@ -87,6 +87,8 @@ export default function Header() {
           return v.x >= 0 && v.x <= p5.width && v.y >= 0 && v.y <= p5.height;  
         }
         
+
+
         }
 
     
@@ -130,7 +132,7 @@ export default function Header() {
 
     return(
         
-        <nav className="navbar border-b mb-10 mt-0 pt-0 overflow-clip">
+        <nav className="navbar border-b mb-10 mt-0 pt-0 overflow-clip ">
             
             {/* <div className='cursorbubble w-5 h-5 ' ref={ref} style={{position: "absolute", "top": ypos - 2, "left": xpos - 5, }}></div> */}
             <div className="navbar-start">
@@ -143,7 +145,7 @@ export default function Header() {
             <div className="navbar-end flex gap-2 mr-12 ">
             <a className="header-btn cursor-pointer hover:underline border-r pr-1 shadow-2xl hover:drop-shadow-white" href="#">Music</a>
             <a className="header-btn cursor-pointer hover:underline border-r pr-1 hover:drop-shadow-white" href="#">Samples</a>
-            <a className="header-btn cursor-pointer hover:underline hover:drop-shadow-white"  href="#">About</a>
+            <a className="header-btn cursor-pointer hover:underline hover:drop-shadow-white"  href="/about">About</a>
             
             </div>
             

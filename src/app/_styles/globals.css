@@ -3,13 +3,16 @@
 @tailwind utilities;
 
 
+body {
+    background: black;
+}
 :root {
     --mousetopposition: 0px;
     --mouseleftposition: 0px;
 }
 @font-face {
     font-family: Epkaisho;
-    src: url("../../public/fonts/epkaisho.woff2")
+    src: url("../_fonts/epkaisho.woff2")
 }
 
 @keyframes smoothfollow {
