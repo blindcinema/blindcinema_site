@@ -1,8 +1,7 @@
+"use client";
+
 import * as React from "react";
 import { P5CanvasInstance, ReactP5Wrapper, SketchProps } from "@p5-wrapper/react";
-
-
-
 
 function sketch(p5: P5CanvasInstance) {
   let camShader;

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../_styles/globals.css";
 import localFont from "next/font/local";
+import NoSSRWrapper from "../_components/NoSSRWrapper";
+
 
 const evaFont = localFont({
    src: '../_fonts/epkaisho.woff2',
@@ -26,7 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="text-white overflow-y-hidden">{children}</body>
+      
+      <body className="text-white overflow-y-hidden"><NoSSRWrapper>{children}</NoSSRWrapper></body>
+      
     </html>
   );
 }

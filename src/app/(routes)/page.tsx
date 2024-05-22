@@ -1,10 +1,13 @@
 "use client";
+import NoSSRWrapper from "../_components/NoSSRWrapper";
 import Header from "../_components/header";
 
-import Background from "../_p5/background";
 import { useState } from "react";
+import dynamic from "next/dynamic";
 
-
+const DynamicBg = dynamic(() => import("../_p5/Background"), {
+  ssr: false,
+})
 
 export default function Home() {
   const [windowX, setWindowX] = useState(window.innerWidth);
@@ -25,10 +28,10 @@ export default function Home() {
           
         </div>
         
-        <div className="absolute top-0 pointer-events-none"><Background>
-        </Background></div>
+        <div className="absolute top-0 pointer-events-none"><DynamicBg>
+        </DynamicBg></div>
       </main>
-      
-    </>
+     </> 
+
   );
 }
