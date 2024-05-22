@@ -1,11 +1,10 @@
 "use client";
-import NoSSRWrapper from "../_components/NoSSRWrapper";
 import Header from "../_components/header";
 
 import { useState } from "react";
 import dynamic from "next/dynamic";
 
-const DynamicBg = dynamic(() => import("../_p5/Background"), {
+const DynamicBg = dynamic(() => import("../_p5/background"), {
   ssr: false,
 })
 
