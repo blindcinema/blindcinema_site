@@ -3,21 +3,8 @@ import "../_styles/globals.css";
 
 import NoSSRWrapper from "../_components/NoSSRWrapper";
 import Header from "../_components/header";
-import { useContext, useState, createContext, useEffect } from "react";
+import {  useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-export const PageContext = createContext({
-  pageName: "",
-  setPageName: () => {},
-
-});
-export const PageProvider = ({
-  children,
-}: Readonly<{children: React.ReactNode}>) => {
-  const [pageName,setPageName] = useState("");
-
-
-
-};
 
 /* export const metadata: Metadata = {
   title: "blindcinema",

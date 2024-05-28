@@ -2,7 +2,7 @@
 import { useEffect, useState, useRef, useMemo } from "react";
 import { P5CanvasInstance, ReactP5Wrapper, type Sketch } from "@p5-wrapper/react";
 import { NextReactP5Wrapper } from "@p5-wrapper/next";
-import { useContext } from "react";
+
 
 export default function Header(props: any | undefined) {
 
@@ -111,7 +111,7 @@ export default function Header(props: any | undefined) {
             {/* <div className='cursorbubble w-5 h-5 ' ref={ref} style={{position: "absolute", "top": ypos - 2, "left": xpos - 5, }}></div> */}
             <div className="navbar-start flex w-12 sm:w-full mr-8 ">
                 <a className="font-Epkaisho titleNoHover text-2xl sm:text-4xl ml-2 mt-1 cursor-pointer z-10 hover:titleHover transition-all h-10 " href="/">{`${props.title}`}</a>
-                <div className="absolute top-1 left-2 hidden sm:inline sm:w-52 ml-0 h-14" id="particle-container" ><ReactP5Wrapper sketch={sketch}/></div>
+                <div className="absolute top-1 left-2 hidden sm:inline sm:w-52 ml-0 h-14" id="particle-container" ><NextReactP5Wrapper sketch={sketch}/></div>
                 
             </div>
             <div className="navbar-center w-24 sm:w-0">
