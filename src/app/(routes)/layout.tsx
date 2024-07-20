@@ -46,7 +46,7 @@ export default function RootLayout({
       
       <body className="text-white overflow-y-hidden">
         <NoSSRWrapper>
-          <Header title={"blindcinema" }/> 
+          {/* <Header title={"blindcinema" }/>  */}
       {/* <Header title={pathname != "/" ?  "blindcinema" + "|"  + pathname.replace("/",""): "blindcinema"}></Header> */}
         {children}
         </NoSSRWrapper></body>
