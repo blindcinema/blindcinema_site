@@ -2,7 +2,7 @@
 import { useEffect, useState, useRef, useMemo } from "react";
 import { P5CanvasInstance, ReactP5Wrapper, type Sketch } from "@p5-wrapper/react";
 import { NextReactP5Wrapper } from "@p5-wrapper/next";
-import { useContext } from "react";
+
 
 export default function Header(props: any | undefined) {
 
