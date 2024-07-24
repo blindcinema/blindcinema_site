@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import Square from "../_p5/square";
 import NoSSRWrapper from "../_components/NoSSRWrapper";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 
 export default function Home() {
@@ -65,7 +67,10 @@ export default function Home() {
       },[element]);
       
       
-      
+    const router = useRouter();
+    const gotoSite = (site : string) => {
+      router.push(site);
+    } 
   return (
     <NoSSRWrapper>
     
@@ -76,12 +81,11 @@ export default function Home() {
         <div className="p-12 pl-8 w-screen mt-12 mb-0 coolborder flex flex-col">
         
           <div className="flex flex-col justify-end h-full w-max text-4xl">
-            <div className=" font-Epkaisho mb-8 w-full hover:titleHover " id="bc" onMouseOver={handleMouseOver}>blindcinema{randomSymbol}</div>
+            <div className=" font-Epkaisho mb-8 w-full hover:titleHover cursor-default " id="bc" onMouseOver={handleMouseOver}>blindcinema{randomSymbol}</div>
             <ul className=" text-3xl ml-1 w-full" id="list" onMouseOver={handleMouseOver}>
-              <li id="li1" className="hover:titleHover">music</li>
-              <li id="li2" className="hover:titleHover">sound design</li>
-              <li id="li3" className="hover:titleHover">social</li>
-              <li id="li4" className="hover:titleHover">LINK</li>
+              <li id="li1" onClick={() => {gotoSite("music")}} className="hover:titleHover cursor-pointer">music</li>
+              <li id="li2" onClick={() => {gotoSite("sounddesign")}} className="hover:titleHover cursor-pointer">sound design</li>
+              <li id="li3" onClick={() => {gotoSite("stuff")}} className="hover:titleHover cursor-pointer">p5js stuff</li>
             </ul>
           </div>
         </div>

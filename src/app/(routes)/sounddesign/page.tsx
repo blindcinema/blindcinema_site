@@ -4,38 +4,28 @@ import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import Script from "next/script";
 import { Spotify } from "react-spotify-embed";
+import Header from "@/app/_components/header";
 const DynamicBg = dynamic(() => import("../../_p5/background"), {
   ssr: false,
 })
 
 export default function Home() {
-  const [windowX, setWindowX] = useState(window.innerWidth);
-  const [windowY, setWindowY] = useState(window.innerHeight);
-  const [isClicked,setClicked] = useState(false);
 
-
-  const revealBg = () => {
-    setClicked(!isClicked);
-  }
   return (
     <>
 
 
-      <main className="" onClick={revealBg}>
+    <main className="h-screen bg-black">
+        <Header title="blindcinema"></Header>
         <div className="flex justify-center flex-col gap-16 mt-12 mr-8 ">
-            <div className="bg-black flex flex-reverse justify-start">
-
+            <div className="">
+              <p>Playlist with sound design</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=rgqa5SuNxbVgSo7_&amp;list=PL-pv-OKN-1T2QdrSOOvZu3cinIGL7mPcB" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
         </div>
         
 
         </div>
-        <div className="bightingplaceholder  grid grid-cols-3 mr-4 ml-4 mt-12 grid-flow-col-dense">          
-        </div>
-        
-        <div className="absolute top-0 pointer-events-none">
-        {isClicked ? <DynamicBg/> : null}
-        
-        </div>
+
       </main>
      </> 
 

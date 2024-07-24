@@ -50,11 +50,15 @@ p5.draw = () => {
   p5.strokeWeight(12);
   p5.stroke("white");
   p5.point(xLoc,yLoc);
+  p5.noStroke();
+  p5.fill("white");
+  p5.text("Site is heavily under construction",p5.random(p5.width/2,p5.width/2 + 2),p5.random(p5.height/2,p5.height/2 + 2));
+  p5.noFill();
   p5.strokeWeight(2);
   p5.push();
   //p5.line(xLoc,yLoc,xLoc,0);
   //p5.noStroke();
-  p5.noFill();
+
   p5.beginShape();
   p5.noStroke();
   //p5.vertex(xLoc,yLoc);

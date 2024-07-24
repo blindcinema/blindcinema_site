@@ -111,16 +111,16 @@ export default function Header(props: any | undefined) {
             {/* <div className='cursorbubble w-5 h-5 ' ref={ref} style={{position: "absolute", "top": ypos - 2, "left": xpos - 5, }}></div> */}
             <div className="navbar-start flex w-12 sm:w-full mr-8 ">
                 <a className="font-Epkaisho titleNoHover text-2xl sm:text-4xl ml-2 mt-1 cursor-pointer z-10 hover:titleHover transition-all h-10 " href="/">{`${props.title}`}</a>
-                {/* <div className="absolute top-1 left-2 hidden sm:inline sm:w-52 ml-0 h-14" id="particle-container" ><ReactP5Wrapper sketch={sketch}/></div> */}
+                 <div className="absolute top-1 left-2 hidden sm:inline sm:w-52 ml-0 h-14" id="particle-container" ><ReactP5Wrapper sketch={sketch}/></div>
                 
             </div>
             <div className="navbar-center w-24 sm:w-0">
             </div>
             <div className="navbar-end flex gap-2 ml-1 mr-1 sm:mr-12 flex-shrink text-sm  sm:text-base ">
             <a className="header-btn cursor-pointer hover:underline border-r pr-1 shadow-2xl hover:drop-shadow-white" href="/music">Music</a>
-            <a className="header-btn cursor-pointer hover:underline border-r pr-1 hover:drop-shadow-white" href="/samples">Samples</a>
+            <a className="header-btn cursor-pointer hover:underline border-r pr-1 hover:drop-shadow-white" href="/">Home</a>
             <a className="header-btn cursor-pointer hover:underline border-r pr-1 hover:drop-shadow-white" href="/sounddesign">Sound Design</a>
-            <a className="header-btn cursor-pointer hover:underline hover:drop-shadow-white" href="/about">About</a>
+            <a className="header-btn cursor-pointer hover:underline hover:drop-shadow-white" href="/">About</a>
             
             </div>
             
