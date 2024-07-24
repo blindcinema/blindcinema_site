@@ -10,8 +10,8 @@ function sketch(p5: P5CanvasInstance) {
 let xLoc = 0;
 let yLoc = 0;
 let numOfDots = 12;
-let dotArray = [];
-let previous = [];
+let dotArray: Array<object> = [];
+let previous: Array<any> = [];
 let noiseScale = 0.05;
 
 p5.updateWithProps = props => {
@@ -33,7 +33,8 @@ p5.setup = () => {
   canvas.style("z-index","-1")
   
   for (let i = 0; i < numOfDots; i++) {
-    let v1 = p5.createVector(p5.random() * p5.windowWidth * 2, p5.random() * p5.windowHeight * 2);
+    let v1 : object = p5.createVector(p5.random() * p5.windowWidth * 2, p5.random() * p5.windowHeight * 2);
+    
     dotArray.push(v1);
     if (i > 0) {
           previous.push(dotArray[i -1]);
