@@ -22,7 +22,7 @@ p5.updateWithProps = props => {
   }
 
 p5.setup = () => {
-  p5.frameRate(12);
+  p5.frameRate(60);
   p5.windowResized = () => { 
     p5.resizeCanvas(p5.windowWidth, p5.windowHeight); 
 } 
@@ -51,9 +51,35 @@ p5.draw = () => {
   p5.stroke("white");
   p5.point(xLoc,yLoc);
   p5.strokeWeight(2);
-  p5.line(xLoc,yLoc,p5.windowWidth / 2, p5.windowHeight / 2);
+  p5.push();
+  //p5.line(xLoc,yLoc,xLoc,0);
+  //p5.noStroke();
+  p5.noFill();
+  p5.beginShape();
+  p5.noStroke();
+  //p5.vertex(xLoc,yLoc);
 
-  for (let i = 0; i < numOfDots; i++) {
+   for (let y = 0; y < yLoc; y++) {
+
+    let randomX = p5.sin(y * p5.frameCount * 0.0005) + xLoc;
+    //p5.vertex(randomX,y);
+    
+    //let mC = p5.map(y,0,p5.height,255,0);
+    let m = p5.sin(p5.frameCount * 0.05);
+    let mC = p5.map(y,0,p5.height,0,255)
+    p5.stroke(255,255,255,mC); 
+    p5.point(xLoc,y);
+  } 
+
+
+  p5.endShape();
+  
+  //p5.noLoop();
+  
+  //p5.line(xLoc,yLoc,p5.windowWidth / 2, p5.windowHeight / 2);
+  
+
+  /*for (let i = 0; i < numOfDots; i++) {
     let noiz = p5.noise(0.0005 * p5.frameCount + i);
 
       let p = dotArray[i];
@@ -65,12 +91,13 @@ p5.draw = () => {
   let customY = p5.cos(noiz) * p5.height + yLoc;
 
     p5.strokeWeight(3);
-    p5.point(x,y);
+    //p5.point(x,y);
     p5.strokeWeight(2);
-    p5.line(x,y,x ,y );
+    //p5.line(x,y,p5.mouseX ,p5.mouseY );
 
     //p5.line();
   }
+  */
 
 }
 }

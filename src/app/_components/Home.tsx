@@ -10,7 +10,7 @@ export default function Home() {
 
   const [randomSymbol,setRandomSymbol] = useState("");
   const [bcRect,setBcRect] = useState<{x: Number | null, y: Number | null}>({x: null, y: null});
-  const [element,setElement] = useState<string>('root');
+  const [element,setElement] = useState<string>('bc');
   const spinny = () => {
     const array = ["*","!","`","^","°","'"];
     const newArray = array[Math.floor(Math.random() * array.length)];
@@ -32,11 +32,11 @@ export default function Home() {
   }
   }
     useEffect(() => {  
-      const resultF =  setInterval(spinny,100);
-      resultF;
+      //const resultF =  setInterval(spinny,100);
+      //resultF;
 
       return () => {
-        clearInterval(resultF);
+        //clearInterval(resultF);
       }
       },[]);
 
@@ -49,7 +49,7 @@ export default function Home() {
       useEffect(()=> {
         let elem = document.getElementById(element);
       
-      console.log(element)
+      //console.log(element)
         
 
       if (elem !== null) {
@@ -75,12 +75,12 @@ export default function Home() {
       <div><Square loc={bcRect}/></div>
         <div className="p-12 pl-8 w-screen mt-12 mb-0 coolborder flex flex-col">
         
-          <div className="flex flex-col justify-end h-full text-4xl">
-            <div className=" font-Epkaisho mb-12 w-max hover:titleHover " id="bc" onMouseOver={handleMouseOver}>blindcinema{randomSymbol}</div>
-            <ul className="font-Epkaisho ml-4 w-max " id="list" onMouseOver={handleMouseOver}>
-              <li id="li1" className="hover:titleHover">LINK</li>
-              <li id="li2" className="hover:titleHover">LINK</li>
-              <li id="li3" className="hover:titleHover">LINK</li>
+          <div className="flex flex-col justify-end h-full w-max text-4xl">
+            <div className=" font-Epkaisho mb-8 w-full hover:titleHover " id="bc" onMouseOver={handleMouseOver}>blindcinema{randomSymbol}</div>
+            <ul className=" text-3xl ml-1 w-full" id="list" onMouseOver={handleMouseOver}>
+              <li id="li1" className="hover:titleHover">music</li>
+              <li id="li2" className="hover:titleHover">sound design</li>
+              <li id="li3" className="hover:titleHover">social</li>
               <li id="li4" className="hover:titleHover">LINK</li>
             </ul>
           </div>
