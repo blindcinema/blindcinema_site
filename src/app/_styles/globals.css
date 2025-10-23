@@ -6,6 +6,7 @@
 body {
     //background: black;
     //background: transparent;
+    cursor: url('/cursor.png') 0 0, auto;
 }
 :root {
     --mousetopposition: 0px;

@@ -56,7 +56,7 @@ function sketch(p5: P5CanvasInstance) {
       p5.box(70);
   p5.pop();
   //p5.filter(p5.BLUR,8);
-  p5.drawingContext.filter = "blur(8px)"
+  p5.drawingContext.filter = "blur(24px)"
   } 
 
 }
