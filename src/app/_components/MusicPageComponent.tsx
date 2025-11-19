@@ -2,25 +2,20 @@
 
 import NoSSRWrapper from "@/app/_components/NoSSRWrapper";
 import { Spotify } from "react-spotify-embed";
+import Header from "./header";
+import Bg_Video from "../_p5/Bg_Video";
 
 export default function MusicPageComponent() {
   return (
     <NoSSRWrapper>
-      <main className="h-screen w-screen relative overflow-hidden">
-        {/* Shared background video */}
-        <video
-          className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
-          src="/video/site_bg.webm"
-          autoPlay
-          muted
-          loop
-          playsInline
-        />
-        {/* Optional global dim so content is readable; pointer-events-none so clicks go through */}
-        <div className="absolute inset-0 bg-black/30 pointer-events-none z-5" />
+      
+      <main className="h-screen">
+      <Header title="blindcinema"></Header>
+      <Bg_Video className="absolute top-0 left-0 -z-10 h-[100lvh]" />
+        
 
         {/* Content columns */}
-        <div className="grid grid-cols-1 md:grid-cols-2 h-full w-full gap-0 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 h-full w-full gap-0 relative">
           {/* Left column */}
           <div className="flex items-center justify-center h-full w-full">
             <div className="w-full max-w-md rounded-lg overflow-hidden border border-neutral-800 bg-transparent">

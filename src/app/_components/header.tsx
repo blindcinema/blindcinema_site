@@ -117,10 +117,10 @@ export default function Header(props: any | undefined) {
             <div className="navbar-center w-24 sm:w-0">
             </div>
             <div className="navbar-end flex gap-2 ml-1 mr-1 sm:mr-12 flex-shrink text-sm  sm:text-base ">
-            <a className="header-btn cursor-pointer hover:underline border-r pr-1 shadow-2xl hover:drop-shadow-white" href="/music">Music</a>
             <a className="header-btn cursor-pointer hover:underline border-r pr-1 hover:drop-shadow-white" href="/">Home</a>
+            <a className="header-btn cursor-pointer hover:underline border-r pr-1 shadow-2xl hover:drop-shadow-white" href="/music">Music</a>
             <a className="header-btn cursor-pointer hover:underline border-r pr-1 hover:drop-shadow-white" href="/sounddesign">Sound Design</a>
-            <a className="header-btn cursor-pointer hover:underline hover:drop-shadow-white" href="/">About</a>
+            <a className="header-btn cursor-pointer hover:underline hover:drop-shadow-white" href="/contact">Contact</a>
             
             </div>
             

@@ -6,6 +6,7 @@ import Script from "next/script";
 import { Spotify } from "react-spotify-embed";
 import Header from "@/app/_components/header";
 import NoSSRWrapper from "@/app/_components/NoSSRWrapper";
+import Bg_Video from "../_p5/Bg_Video";
 
 
 export default function SoundDesignComponent() {
@@ -14,8 +15,9 @@ export default function SoundDesignComponent() {
     <NoSSRWrapper>
 
 
-    <main className="h-screen bg-black">
+    <main className="h-screen">
         <Header title="blindcinema"></Header>
+          <Bg_Video className="absolute top-0 left-0 -z-10 h-[100lvh]" />
         <div className="flex justify-center flex-col gap-16 mt-12 mr-8 ">
             <div className="">
               <p>Playlist with sound design</p>

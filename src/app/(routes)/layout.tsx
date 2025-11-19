@@ -30,7 +30,8 @@ export default function RootLayout({
           {/* <Header title={"blindcinema" }/>  */}
       {/* <Header title={pathname != "/" ?  "blindcinema" + "|"  + pathname.replace("/",""): "blindcinema"}></Header> */}
         {children}
-        <Trail></Trail>
+        {//<Trail></Trail>
+    }
         </NoSSRWrapper></body>
       
     </html>
