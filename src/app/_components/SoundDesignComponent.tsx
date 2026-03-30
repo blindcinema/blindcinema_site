@@ -21,7 +21,7 @@ export default function SoundDesignComponent() {
         <div className="flex justify-center flex-col gap-16 mt-12 mr-8 ">
             <div className="">
               <p>Playlist with sound design</p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=rgqa5SuNxbVgSo7_&amp;list=PL-pv-OKN-1T2QdrSOOvZu3cinIGL7mPcB" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=uMNMsu5ifWQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
         </div>
         
 
